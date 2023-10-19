@@ -10,24 +10,24 @@
 
 <form method="post">
     <p>Wprowadź liczby i wybierz działanie</p>
-    <input type="number" step="0.01" name="liczba1" id="liczba1" th:value="${param.liczba1}">
-    <select name="operacja">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
+    <input type="number" name="liczba1" id="liczba1" th:value="${param.liczba1}">
+    <select id="operacja" name="operacja">
+        <option value="+" th:selected="${operacja == '+'}">+</option>
+        <option value="-" th:selected="${operacja == '-'}">-</option>
+        <option value="*" th:selected="${operacja == '*'}">*</option>
+        <option value="/" th:selected="${operacja == '/'}">/</option>
     </select>
-    <input type="number" step="0.01" name="liczba2" id="liczba2" th:value="${param.liczba2}">
+    <input type="number" name="liczba2" id="liczba2" th:value="${param.liczba2}">
     <button>Oblicz</button>
 </form>
-<div th:if="${message != null}" class="wynik">
+
+<div th:if="${wynik != null}" class="wynik">
     <span th:text="${param.liczba1}">2</span>
     <span th:text="${param.operacja}">+</span>
     <span th:text="${param.liczba2}">3</span>
     =
     <strong th:text="${message}">5</strong>
 </div>
-
 </body>
 </html>
 
