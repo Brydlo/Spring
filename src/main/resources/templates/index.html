@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Spis treści</title>
+<link rel="stylesheet" type="text/css" th:href="@{/styl.css}">
+</head>
+<body>
+<h1>Spis treści</h1>
+
+<h2>Przykłady pisane bezpośrednio w Controllerze</h2>
+<ul>
+<li><a th:href="@{/hello}">Hello</a></li>
+<li><a th:href="@{/ping}">Ping</a></li>
+
+<li><a th:href="@{/time1}">Czas obiektowo</a> (json)</li>
+<li><a th:href="@{/time2}">Czas tekstowo</a></li>
+<li><a th:href="@{/time3}">Czas tekstowo</a> (text/plain)</li>
+<li><a th:href="@{/time4}">Czas HTML w Javie</a></li>
+</ul>
+
+<h2>Przykłady z szablonami</h2>
+<ul>
+<li><a th:href="@{/time5}">Czas szablon prosty</a></li>
+<li><a th:href="@{/time6}">Czas szablon rozbudowany</a></li>
+</ul>
+
+<h2>Przykład Parametry</h2>
+<ul>
+<li><a th:href="@{/parametry/witaj}">witaj</a></li>
+<li><a th:href="@{/parametry/witaj(imie='Ala')}">witaj?imie=Ala</a></li>
+<li><a th:href="@{/parametry/powtorz}">powtorz</a></li>
+<li><a th:href="@{/parametry/powtorz(tekst='Ola ma psa')}">powtorz</a> n = 1</li>
+<li><a th:href="@{/parametry/powtorz(tekst='Ala ma kota',n=10)}">powtorz</a> n = 10</li>
+</ul>
+
+
+
+</body>
+</html>

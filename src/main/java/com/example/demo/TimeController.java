@@ -28,7 +28,7 @@ public class TimeController {
         return LocalTime.now().toString();
     }
     private static final DateTimeFormatter FORMAT_DATY = DateTimeFormatter
-            .ofPattern("EEEE, dd.MM.YYYY, 'godzina' HH:mm:ss", new Locale("pl", "PL"));
+            .ofPattern("EEEE, dd.MM.yyyy, 'godzina' HH:mm:ss", new Locale("pl", "PL"));
 
     @GetMapping("/time3")
     @ResponseBody
@@ -74,8 +74,9 @@ public class TimeController {
             dates.add(date.plusWeeks(i));
         }
         model.addAttribute("futureWeeks", dates);
+        String s = "wyswietl_czas6.html";
 
-        return "wyswietl_czas6.html";
+        return s;
     }
 
 }

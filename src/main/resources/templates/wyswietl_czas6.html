@@ -16,7 +16,7 @@
      -->
     <!-- Najbardziej zalecane podejście: dodatkowa przestrzeń nazw th
         Aby to zadziałało, w HTMLu (najczęściej na samym początku) musi byś zadeklarowana przestrzeń nazw.
-
+        
         "Tekst, który znajduje się wewnątrz znacznika, zastąp wartością zmiennej dt"
     -->
     <li th:text="${dt}">jakaś godzina 1</li>
@@ -47,7 +47,7 @@
 <h3>Odczyt elementów listy</h3>
 <p>Ten sam dzień w kolejnych tygodniach:</p>
 <ol start="0">
-    <li th:each="date : ${futureWeeks}" th:text="${date}">2022-08-01</li>
+	<li th:each="date : ${futureWeeks}" th:text="${date}">2022-08-01</li>
 </ol>
 
 </body>
