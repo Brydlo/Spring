@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styl.css}" href="../static/styl.css">
+</head>
+<body>
+<h1>Kalkulator</h1>
+
+<form method="post">
+    <p>Wprowadź liczby i wybierz działanie</p>
+    <input type="number" step="0.01" name="liczba1" id="liczba1" th:value="${param.liczba1}">
+    <select name="operacja">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" step="0.01" name="liczba2" id="liczba2" th:value="${param.liczba2}">
+    <button>Oblicz</button>
+</form>
+<div th:if="${message != null}" class="wynik">
+    <span th:text="${param.liczba1}">2</span>
+    <span th:text="${param.operacja}">+</span>
+    <span th:text="${param.liczba2}">3</span>
+    =
+    <strong th:text="${message}">5</strong>
+</div>
+
+</body>
+</html>
+
+
