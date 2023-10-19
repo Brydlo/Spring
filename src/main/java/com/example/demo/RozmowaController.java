@@ -8,10 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping
+@RequestMapping("/rozmowa")
 public class RozmowaController {
 
-    @PostMapping(path="/rozmowa", method= RequestMethod.POST)
+    @PostMapping
     public String rozmowaPost(String imie, Model model) {
         if(imie != null && !imie.isBlank()) {
 //        jak się dostać do parametru imie z przegladarki
