@@ -22,19 +22,19 @@ public class BlogRestController {
         return blogService.getTeksty();
     }
 
-    @GetMapping(path="/{numer}", produces="application/json")
+    @GetMapping(path="/{numer}", produces="text/plain")
     public String getTekst(@PathVariable("numer") int i) {
         return blogService.getTekst(i);
     }
 
-    @PutMapping(path="/{numer}", consumes = {"application/json", "text/plain"})
+    @PutMapping(path="/{numer}", consumes="text/plain")
     public void setTekst(
             @PathVariable("numer") int i,
             @RequestBody String tekst) {
         blogService.setTekst(i, tekst);
     }
 
-    @PostMapping(consumes = {"application/json", "text/plain"})
+    @PostMapping(consumes="text/plain")
     public void addTekst(@RequestBody String tekst) {
         blogService.addTekst(tekst);
     }
