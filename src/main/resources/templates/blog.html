@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styl.css}" href="../static/styl.css">
+</head>
+<body>
+<h1>Blog - wersja webowa</h1>
+
+<form method="post">
+    <label for="tekst">Napisz coś:</label><input id="tekst" name="tekst" type="text"><br>
+    <button>OK</button>
+</form>
+
+<section>
+    <h2>Zapamiętane teksty:</h2>
+    <ul>
+        <li th:each="tekst : ${teksty}" th:text="${tekst}">przykładowy tekst</li>
+    </ul>
+</section>
+
+</body>
+</html>
+
+
