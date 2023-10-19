@@ -25,7 +25,7 @@ public class RozmowaController {
         return "rozmowa.html";
     }
     @GetMapping
-    public String rozmowaGet(String imie, Model model) {
+    public String rozmowaGet() {
         return "rozmowa.html";
     }
 
