@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rozmowa</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styl.css}" href="../static/styl.css">
+</head>
+<body>
+<h1>Rozmowa ze Springiem</h1>
+
+<form method="post">
+    <label for="imie">Jak masz na imię?</label><br>
+    <input id="imie" name="imie" type="text"><br>
+    <button>OK</button>
+</form>
+<div class="wynik" th:text="${message}" th:if="${message != null}">
+    Lorem ipsum.
+</div>
+
+
+</body>
+</html>
+
+
